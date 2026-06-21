@@ -90,4 +90,12 @@ Para colocar um código em uma linha, utilize o acento grave ` no início e no f
 
 `Codigo aqui`
 
-### Para múltiplas linhas, coloque três acentos graves:
+### Para múltiplas linhas, coloque três acentos graves (``` ):
+
+```
+
+Primeira linha do código
+Segunda linha do código
+Terceira linha do código
+
+```
