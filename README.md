@@ -52,9 +52,9 @@ Coloque o endereço URL dentro de chaves, exemplo:
 
 Para listas não ordenadas, utilize um asterisco \* na frente do item:
 
-- item 1
-- item 2
-- item 3
+* item 1
+* item 2
+* item 3
 
 ## Para listas ordenadas, utilize:
 
@@ -99,3 +99,83 @@ Segunda linha do código
 Terceira linha do código
 
 ```
+# Padrões de Commits (Commit Patterns)
+É de muita importância que todos os envolvidos no projeto entendam as mudanças ocorridas e quais foram os contextos de alteração do código. Para isso o __git commit__ precisa ser utilizado apropriadamente
+
+
+
+## O que é o Conventional Commits ?
+
+O Conventional Commits é uma convenção simples de mensagens de commit, que segue um conjunto de regras e que ajuda os projetos a terem um histórico de commit explícito e bem estruturado.
+
+O **Conventional Commits** deixara a linha do tempo de um projeto mais estruturada e fácil de entender. Quando documentados utilizando o **Conventional Commits** nos mostram quem alterou, quando, em qual contexto e qual tipo de alteração foi feita.
+
+## Como utilizar ?
+A mensagem do commit deve ser estruturada da seguinte forma:
+
+```
+:emoji: <tipo>(escopo): <descrição>
+
+```
+Os commits terão um emoji para dar uma identificação visual a mensagem, um tipo, um escopo para dar contexto, e uma descrição onde poderá colocar os detalhes do commit.
+
+**OBS**: O emoji e o escopo são opcionais, porém é recomendado que siga o escopo a cima.
+
+## Tipos de Commits
+
+O commit possui os elementos estruturais abaixo (tipos), que informam a intenção do seu commit ao utilizador(a) de seu código.
+
+* **fix** - Commits do tipo fix indicam que seu trecho de código commitado está solucionando um problema (bug fix), (se relaciona com o PATCH do versionamento semântico).
+
+* **feat**- Commits do tipo feat indicam que seu trecho de código está incluindo um novo recurso (se relaciona com o MINOR do versionamento semântico).
+
+* **docs** - Commits do tipo docs indicam que houveram mudanças na documentação, como por exemplo no Readme do seu repositório. (Não inclui alterações em código).
+
+* **style** - Commits do tipo style indicam que houveram alterações referentes a formatações de código, semicolons, trailing spaces, lint... (Não inclui alterações em código).
+
+* **refactor** - Commits do tipo refactor referem-se a mudanças devido a refatorações que não alterem sua funcionalidade, como por exemplo, uma alteração no formato como é processada determinada parte da tela, mas que manteve a mesma funcionalidade, ou melhorias de performance devido a um code review.
+
+* **build** - Commits do tipo build são utilizados quando são realizadas modificações em arquivos de build e dependências.
+
+* **test** - Commits do tipo test são utilizados quando são realizadas alterações em testes, seja criando, alterando ou excluindo testes unitários. (Não inclui alterações em código)
+
+* **chore** - Commits do tipo chore indicam atualizações de tarefas de build, configurações de administrador, pacotes... como por exemplo adicionar um pacote no gitignore. (Não inclui alterações em código)
+
+## Emojis
+| Tipo de Commit | Emoji e Código |
+| :--- | :--- |
+| Commit inicial | 🎉 `:tada:` |
+| Tag de versão | 🔖 `:bookmark:` |
+| Novo recurso | ✨ `:sparkles:` |
+| Lista de ideias (tasks) | 🔜 `:soon:` |
+| Bugfix | 🐛 `:bug:` |
+| Documentação | 📚 `:books:` |
+| Testes | 🧪 `:test_tube:` |
+| Adicionando um teste | ✅ `:white_check_mark:` |
+| Teste de aprovação | ✔️ `:heavy_check_mark:` |
+| Acessibilidade | ♿ `:wheelchair:` |
+| Texto | 📝 `:pencil:` |
+| Package.json em JS | 📦 `:package:` |
+| Em progresso | 🚧 `:construction:` |
+| Arquivos de configuração | 🔧 `:wrench:` |
+| Removendo uma dependência | ➖ `:heavy_minus_sign:` |
+| Adicionando uma dependência | ➕ `:heavy_plus_sign:` |
+| Revertendo mudanças | 💥 `:boom:` |
+| Alterações de revisão de código | 👌 `:ok_hand:` |
+| Refatoração | ♻️ `:recycle:` |
+| Mover/Renomear | 🚚 `:truck:` |
+
+## Exemplos de utilização
+
+git commit -m ":tada: Iniciando projeto"
+git commit -m ":heavy_plus_sign: build: Instalando dependencias"
+git commit -m ":sparkles: feat(header): Adicionando e posicionando os icones"
+git commit -m ":books: docs(readme): Criando documentação do projeto"
+
+# Atenção
+**_Algumas partes deste artigo como por exemplo o uso de emojis é uma particularidade não necessariamente é o mais certo a se fazer, muitas empresas usam padrões de commits diferentes. O importante é se atentar ao escrever a mensagem de um commit, para que outros entendam e fique bem claro oque foi alterado ou criado_**
+
+## Referências e Leituras Recomendadas
+
+* **Padrões de Commits:** Grande parte da seção sobre regras e tipos de commits foi baseada neste [Artigo de Apoio no Dev.to](https://dev.to/renatoadorno/padroes-de-commits-commit-patterns-41co).
+* **Conventional Commits:** [Site Oficial](https://www.conventionalcommits.org/en/v1.0.0/)
